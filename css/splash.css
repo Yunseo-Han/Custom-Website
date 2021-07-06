@@ -1,0 +1,197 @@
+@font-face {
+	font-family: montroc;
+	src: url('../fonts/montroc.ttf');
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	font-size: 62.5%;
+	font-family: montroc;
+	scroll-behavior: smooth;
+	background: #cfefec;
+}
+
+/* Splash Screen */
+
+.splash-text {
+	position: fixed;
+	top: 50%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+
+	font-size: 3rem;
+	letter-spacing: 4rem;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-right: 0.3rem solid black;
+}
+
+.white-cursor-text {
+	position: fixed;
+	top: 50%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+
+	font-size: 3rem;
+	letter-spacing: 4rem;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-right: 0.3rem solid white;
+}
+
+.cursor-blink {
+	animation: cursorBlink 0.8s steps(1) infinite;
+}
+@keyframes cursorBlink {
+	50% {
+		border-right: 0.3rem solid transparent;
+	}
+}
+
+/* Splash Screen Unlock */
+
+.white-splash-text {
+	position: fixed;
+	top: 50%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+
+	font-size: 3rem;
+	color: #fcfdff;
+	letter-spacing: 4rem;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-right: 0.3rem solid transparent;
+}
+
+.dissapear {
+	animation: dissapear 200ms linear;
+	animation-fill-mode: forwards; /* animation property stays after execution */
+}
+@keyframes dissapear {
+	0% {
+	}
+	50% {
+		opacity: 30%;
+	}
+	100% {
+		opacity: 0%;
+	}
+}
+
+#topbar.is-active {
+	position: fixed;
+	width: 100%;
+	height: 47%;
+	background: #76abaa;
+}
+
+#topbar.not-active {
+	position: fixed;
+	width: 100%;
+	height: 0%;
+	background: #76abaa;
+	transition: all 400ms linear;
+}
+
+#bottombar.is-active {
+	position: fixed;
+	width: 100%;
+	height: 47%;
+	top: 53%;
+	background: #76abaa;
+}
+
+#bottombar.not-active {
+	position: fixed;
+	width: 100%;
+	height: 47%;
+	top: 100%;
+	background: #76abaa;
+	transition: all 400ms linear;
+}
+
+.hide {
+	z-index: -1;
+	display: none;
+}
+
+/* .shake {
+	animation: shake 1s;
+}
+@keyframes shake {
+	0% {
+		position: relative;
+		color: white;
+		left: -2rem;
+	}
+	5% {
+		color: black;
+		left: 2rem;
+	}
+	10% {
+		color: white;
+		left: -1rem;
+	}
+	15% {
+		color: black;
+		left: 1rem;
+	}
+	20% {
+		color: white;
+		left: -1rem;
+	}
+	25% {
+		left: 0rem;
+		color: transparent;
+	}
+	100% {
+		color: transparent;
+		left: 0rem;
+	}
+} */
+
+/* .splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	background: #76abaa;
+
+} */
+
+/* .midbar {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+	background: #cfefec;
+} */
+
+/* .text-wrapper h1 {
+
+	overflow: hidden;
+	border-right: 0.15rem solid black;
+	white-space: nonwrap;
+	margin: 0 auto;
+
+	font-size: 4rem;
+	letter-spacing: 3rem;
+} */
