@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         bottombar.classList.add('hide');
     }, 7500);
     setTimeout(function () {
-        window.location.href = "index.html"
+        window.location.href = "html/index.html"
     }, 7550);
 });
